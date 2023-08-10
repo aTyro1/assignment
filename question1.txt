@@ -1,0 +1,21 @@
+1. Level 1
+
+	#Bash Code to find the largest (.log) file in a linux computer
+	du |  find . -name "*.log" | sort -n -r | head -n 1
+	
+	Explanation:
+	
+	du: counts the size of all files in directory
+	find: finds the file of specific type in a directory
+	sort: sorts the result
+	head: prints the first n lines from the head
+
+	#Bash Code to truncate the file to 100 lines
+	tac "file" | sed '1,10 d' | tac
+
+	Explanation:
+	
+	tac:reverses the characters in a file
+	sed:deletes the n lines from a given line number (flows downward)
+	
+
